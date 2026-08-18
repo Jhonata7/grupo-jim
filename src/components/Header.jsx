@@ -2,10 +2,9 @@ import { useState } from "react";
 import {
   Menu,
   X,
-  ArrowRight,
 } from "lucide-react";
 
-import logo from "../assets/grupo-jim-logopng.png";
+import logo from "../assets/grupo-jim-logo-preto.png";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -17,68 +16,46 @@ export default function Header() {
   return (
     <header className="header">
       <div className="container header-container">
-
         <a
           href="#inicio"
           className="logo-link"
           onClick={closeMenu}
+          aria-label="Ir para o início"
         >
           <img
             src={logo}
-            alt="Grupo JIM Saúde e Segurança do Trabalho"
+            alt="JIM SST - Saúde e Segurança do Trabalho"
             className="logo"
           />
         </a>
 
         <nav
+          id="menu-principal"
           className={`nav ${
             menuOpen ? "nav-open" : ""
           }`}
+          aria-label="Navegação principal"
         >
-          <a
-            href="#inicio"
-            onClick={closeMenu}
-          >
+          <a href="#inicio" onClick={closeMenu}>
             Início
           </a>
 
-          <a
-            href="#empresa"
-            onClick={closeMenu}
-          >
+          <a href="#empresa" onClick={closeMenu}>
             Quem Somos
           </a>
 
-          <a
-            href="#servicos"
-            onClick={closeMenu}
-          >
+          <a href="#servicos" onClick={closeMenu}>
             Serviços
           </a>
 
-          <a
-            href="#galeria"
-            onClick={closeMenu}
-          >
+          <a href="#galeria" onClick={closeMenu}>
             Atuação
           </a>
 
-          <a
-            href="#contato"
-            onClick={closeMenu}
-          >
+          <a href="#contato" onClick={closeMenu}>
             Contato
           </a>
 
-          <a
-            href="#contato"
-            className="header-cta"
-            onClick={closeMenu}
-          >
-            Solicitar atendimento
-
-            <ArrowRight size={17} />
-          </a>
         </nav>
 
         <button
@@ -92,6 +69,8 @@ export default function Header() {
               ? "Fechar menu"
               : "Abrir menu"
           }
+          aria-expanded={menuOpen}
+          aria-controls="menu-principal"
         >
           {menuOpen ? (
             <X size={27} />
@@ -99,7 +78,6 @@ export default function Header() {
             <Menu size={27} />
           )}
         </button>
-
       </div>
     </header>
   );

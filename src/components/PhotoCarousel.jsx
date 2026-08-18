@@ -44,44 +44,34 @@ const slides = [
 ];
 
 export default function PhotoCarousel() {
-
-  const [current, setCurrent] =
-    useState(0);
+  const [current, setCurrent] = useState(0);
 
   function nextSlide() {
-
     setCurrent((currentSlide) =>
       currentSlide === slides.length - 1
         ? 0
         : currentSlide + 1
     );
-
   }
 
   function previousSlide() {
-
     setCurrent((currentSlide) =>
       currentSlide === 0
         ? slides.length - 1
         : currentSlide - 1
     );
-
   }
 
   useEffect(() => {
-
     const interval = setInterval(() => {
-
       setCurrent((currentSlide) =>
         currentSlide === slides.length - 1
           ? 0
           : currentSlide + 1
       );
-
     }, 5000);
 
     return () => clearInterval(interval);
-
   }, []);
 
   return (
@@ -89,7 +79,6 @@ export default function PhotoCarousel() {
       id="galeria"
       className="section gallery"
     >
-
       <div className="container">
 
         <div className="section-heading gallery-heading">
@@ -110,10 +99,12 @@ export default function PhotoCarousel() {
 
         </div>
 
-        <div className="carousel">
+        <div
+          className="carousel"
+          aria-label="Galeria de atuação do Grupo JIM"
+        >
 
           {slides.map((slide, index) => (
-
             <div
               key={slide.title}
               className={
@@ -121,11 +112,16 @@ export default function PhotoCarousel() {
                   ? "carousel-slide carousel-slide-active"
                   : "carousel-slide"
               }
+              aria-hidden={index !== current}
             >
-
               <img
                 src={slide.image}
                 alt={slide.title}
+                loading={
+                  index === 0
+                    ? "eager"
+                    : "lazy"
+                }
               />
 
               <div className="carousel-overlay" />
@@ -141,9 +137,7 @@ export default function PhotoCarousel() {
                 </p>
 
               </div>
-
             </div>
-
           ))}
 
           <button
@@ -152,7 +146,7 @@ export default function PhotoCarousel() {
             onClick={previousSlide}
             aria-label="Imagem anterior"
           >
-            <ChevronLeft />
+            <ChevronLeft size={26} />
           </button>
 
           <button
@@ -161,13 +155,14 @@ export default function PhotoCarousel() {
             onClick={nextSlide}
             aria-label="Próxima imagem"
           >
-            <ChevronRight />
+            <ChevronRight size={26} />
           </button>
 
-          <div className="carousel-dots">
-
+          <div
+            className="carousel-dots"
+            aria-label="Selecionar imagem da galeria"
+          >
             {slides.map((slide, index) => (
-
               <button
                 type="button"
                 key={slide.title}
@@ -178,16 +173,18 @@ export default function PhotoCarousel() {
                     : "carousel-dot"
                 }
                 aria-label={`Ir para slide ${index + 1}`}
+                aria-current={
+                  index === current
+                    ? "true"
+                    : undefined
+                }
               />
-
             ))}
-
           </div>
 
         </div>
 
       </div>
-
     </section>
   );
 }

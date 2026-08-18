@@ -10,70 +10,56 @@ export default function About() {
       className="section about"
     >
       <div className="container about-grid">
-
         <div className="about-image-wrapper">
-
           <img
             src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80"
-            alt="Equipe de segurança do trabalho"
+            alt="Profissionais atuando em ambiente de trabalho com foco em segurança ocupacional"
             className="about-image"
           />
 
           <div className="about-floating-card">
-
             <div className="about-floating-icon">
               <ShieldCheck size={30} />
             </div>
 
             <div>
-
               <strong>
                 Segurança em primeiro lugar
               </strong>
 
               <span>
-                Protegendo pessoas e empresas
+                Protegendo pessoas e operações
               </span>
-
             </div>
-
           </div>
-
         </div>
 
         <div className="about-content">
-
           <span className="section-label">
-            Sobre o Grupo JIM
+            Sobre a JIM SST
           </span>
 
           <h2>
-            Experiência e compromisso com a
-            segurança ocupacional.
+            Segurança ocupacional com responsabilidade,
+            prevenção e eficiência.
           </h2>
 
           <p>
-            O Grupo JIM atua na área de Saúde e
-            Segurança do Trabalho, oferecendo
-            soluções técnicas para empresas que
-            desejam proteger seus colaboradores e
-            cumprir as exigências legais.
+            A JIM SST atua na área de Saúde e Segurança
+            do Trabalho, oferecendo soluções técnicas para
+            empresas que buscam proteger seus colaboradores,
+            reduzir riscos e manter suas operações em
+            conformidade.
           </p>
 
           <p>
-            Nosso objetivo é reduzir riscos,
-            prevenir acidentes e promover um
-            ambiente de trabalho mais seguro e
-            produtivo.
+            Com uma abordagem preventiva e personalizada,
+            a empresa avalia as necessidades de cada operação
+            e contribui para uma cultura de segurança mais
+            sólida, eficiente e presente no dia a dia.
           </p>
 
           <div className="about-points">
-
-            <div>
-              <CheckCircle2 size={20} />
-              Atendimento especializado
-            </div>
-
             <div>
               <CheckCircle2 size={20} />
               Prevenção de riscos
@@ -81,18 +67,20 @@ export default function About() {
 
             <div>
               <CheckCircle2 size={20} />
-              Consultoria técnica
+              Conformidade ocupacional
             </div>
 
             <div>
               <CheckCircle2 size={20} />
-              Segurança ocupacional
+              Proteção aos colaboradores
             </div>
 
+            <div>
+              <CheckCircle2 size={20} />
+              Atendimento especializado
+            </div>
           </div>
-
         </div>
-
       </div>
     </section>
   );

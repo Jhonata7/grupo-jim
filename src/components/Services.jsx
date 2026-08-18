@@ -1,49 +1,69 @@
 import {
+  GraduationCap,
+  Settings,
   ShieldCheck,
-  ClipboardCheck,
-  FileText,
-  HardHat,
-  HeartPulse,
-  Users,
-  ArrowUpRight,
+  FileSearch,
+  TriangleAlert,
+  Accessibility,
+  Flame,
+  BadgeCheck,
+  ClipboardList,
 } from "lucide-react";
 
 const services = [
   {
+    icon: GraduationCap,
+    title: "Treinamentos SST",
+    description:
+      "Treinamentos de Saúde e Segurança do Trabalho nas modalidades EAD e presencial.",
+  },
+  {
+    icon: Settings,
+    title: "Gestão Wehandle",
+    description:
+      "Gestão integrada de documentos, processos e informações relacionadas à Saúde e Segurança do Trabalho.",
+  },
+  {
     icon: ShieldCheck,
-    title: "Segurança do Trabalho",
+    title: "PGR",
     description:
-      "Gestão preventiva de riscos para proporcionar ambientes de trabalho mais seguros e eficientes.",
+      "Programa de Gerenciamento de Riscos para identificação, avaliação e controle dos riscos ocupacionais.",
   },
   {
-    icon: ClipboardCheck,
-    title: "Gestão Ocupacional",
+    icon: FileSearch,
+    title: "LTCAT",
     description:
-      "Planejamento e acompanhamento das ações relacionadas à saúde e segurança dos colaboradores.",
+      "Laudo Técnico das Condições Ambientais do Trabalho para avaliação da exposição dos colaboradores.",
   },
   {
-    icon: FileText,
-    title: "Laudos e Documentações",
+    icon: TriangleAlert,
+    title: "Laudos de Insalubridade e Periculosidade",
     description:
-      "Elaboração e organização de documentos técnicos relacionados à segurança ocupacional.",
+      "Avaliação técnica das condições de trabalho e dos agentes que podem caracterizar insalubridade ou periculosidade.",
   },
   {
-    icon: HardHat,
-    title: "Treinamentos",
+    icon: Accessibility,
+    title: "Análise Ergonômica do Trabalho",
     description:
-      "Capacitação de trabalhadores para prevenção de acidentes e adoção de boas práticas.",
+      "Avaliação das condições ergonômicas para promover segurança, conforto e eficiência nas atividades profissionais.",
   },
   {
-    icon: HeartPulse,
-    title: "Saúde Ocupacional",
+    icon: Flame,
+    title: "AVCB",
     description:
-      "Soluções direcionadas à preservação da saúde e qualidade de vida dos trabalhadores.",
+      "Assessoria para obtenção do Auto de Vistoria do Corpo de Bombeiros e adequação das medidas de segurança.",
   },
   {
-    icon: Users,
-    title: "Consultoria Especializada",
+    icon: BadgeCheck,
+    title: "ART",
     description:
-      "Suporte técnico personalizado para empresas de diferentes segmentos e portes.",
+      "Anotação de Responsabilidade Técnica para formalização e comprovação dos serviços profissionais realizados.",
+  },
+  {
+    icon: ClipboardList,
+    title: "APR",
+    description:
+      "Análise Preliminar de Risco para identificação de perigos e definição de medidas preventivas antes das atividades.",
   },
 ];
 
@@ -54,25 +74,23 @@ export default function Services() {
       className="section services"
     >
       <div className="container">
-
         <div className="section-heading">
           <span className="section-label">
-            Nossas soluções
+            Serviços da JIM SST
           </span>
 
           <h2>
-            Segurança do trabalho muito além de uma obrigação.
+            Soluções completas em Saúde e Segurança do Trabalho.
           </h2>
 
           <p>
-            Soluções técnicas para ajudar empresas
-            a prevenir riscos, proteger trabalhadores
-            e construir ambientes mais seguros.
+            Serviços técnicos especializados para prevenção de riscos,
+            conformidade, proteção dos colaboradores e segurança das
+            operações.
           </p>
         </div>
 
         <div className="services-grid">
-
           {services.map((service) => {
             const Icon = service.icon;
 
@@ -85,25 +103,13 @@ export default function Services() {
                   <Icon size={28} />
                 </div>
 
-                <h3>
-                  {service.title}
-                </h3>
+                <h3>{service.title}</h3>
 
-                <p>
-                  {service.description}
-                </p>
-
-                <a href="#contato">
-                  Saiba mais
-
-                  <ArrowUpRight size={17} />
-                </a>
+                <p>{service.description}</p>
               </article>
             );
           })}
-
         </div>
-
       </div>
     </section>
   );
