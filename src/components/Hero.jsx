@@ -27,19 +27,19 @@ export default function Hero() {
           <ShieldCheck size={18} />
 
           <span>
-            JIM SST • Saúde e Segurança do Trabalho
+            JIM SST • Atendimento na Zona Oeste de São Paulo
           </span>
         </div>
 
         <h1>
-          Segurança que protege
-          <span> pessoas, empresas e resultados.</span>
+          Treinamentos e soluções em SST
+          <span> para empresas na Zona Oeste de SP.</span>
         </h1>
 
         <p className="hero-description">
-          Soluções especializadas em Saúde e Segurança
-          do Trabalho, com responsabilidade técnica,
-          prevenção de riscos e atendimento personalizado.
+          Saúde e Segurança do Trabalho com responsabilidade técnica,
+          prevenção de riscos e atendimento personalizado na Lapa,
+          Jaguaré, Vila Leopoldina, Barra Funda e região.
         </p>
 
         <div className="hero-buttons">
@@ -56,7 +56,7 @@ export default function Hero() {
             <CheckCircle2 size={18} />
 
             <span>
-              Gestão e prevenção de riscos
+              Treinamentos SST presenciais e EAD
             </span>
           </div>
 

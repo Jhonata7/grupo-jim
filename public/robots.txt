@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://jimsst.com.br/sitemap.xml

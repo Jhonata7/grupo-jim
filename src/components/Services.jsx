@@ -15,13 +15,13 @@ const services = [
     icon: GraduationCap,
     title: "Treinamentos SST",
     description:
-      "Treinamentos de Saúde e Segurança do Trabalho nas modalidades EAD e presencial.",
+      "Treinamentos de Saúde e Segurança do Trabalho nas modalidades EAD e presencial para empresas na Zona Oeste de São Paulo.",
   },
   {
     icon: Settings,
-    title: "Gestão Wehandle",
+    title: "Gestão WeHandle",
     description:
-      "Gestão integrada de documentos, processos e informações relacionadas à Saúde e Segurança do Trabalho.",
+      "Apoio na organização de documentos, processos e informações de SST relacionados à gestão de terceiros na plataforma WeHandle.",
   },
   {
     icon: ShieldCheck,
@@ -80,13 +80,12 @@ export default function Services() {
           </span>
 
           <h2>
-            Soluções completas em Saúde e Segurança do Trabalho.
+            Treinamentos e soluções completas em Saúde e Segurança do Trabalho.
           </h2>
 
           <p>
-            Serviços técnicos especializados para prevenção de riscos,
-            conformidade, proteção dos colaboradores e segurança das
-            operações.
+            Serviços técnicos para prevenção de riscos, conformidade,
+            proteção dos colaboradores e segurança das operações.
           </p>
         </div>
 
