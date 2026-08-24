@@ -13,7 +13,7 @@ export default function About() {
         <div className="about-image-wrapper">
           <img
             src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?auto=format&fit=crop&w=1200&q=80"
-            alt="Profissionais atuando em ambiente de trabalho com foco em segurança ocupacional"
+            alt="Profissionais em treinamento de segurança do trabalho na Zona Oeste de São Paulo"
             className="about-image"
           />
 
@@ -40,26 +40,30 @@ export default function About() {
           </span>
 
           <h2>
-            Segurança ocupacional com responsabilidade,
-            prevenção e eficiência.
+            Segurança ocupacional para empresas na
+            Zona Oeste de São Paulo.
           </h2>
 
           <p>
-            A JIM SST atua na área de Saúde e Segurança
-            do Trabalho, oferecendo soluções técnicas para
-            empresas que buscam proteger seus colaboradores,
-            reduzir riscos e manter suas operações em
+            A JIM SST oferece treinamentos e soluções técnicas em Saúde
+            e Segurança do Trabalho para empresas que buscam proteger
+            colaboradores, reduzir riscos e manter suas operações em
             conformidade.
           </p>
 
           <p>
-            Com uma abordagem preventiva e personalizada,
-            a empresa avalia as necessidades de cada operação
-            e contribui para uma cultura de segurança mais
-            sólida, eficiente e presente no dia a dia.
+            O atendimento contempla empresas na Lapa, Jaguaré,
+            Vila Leopoldina, Barra Funda, Jaguara e demais bairros da
+            Zona Oeste, com análise personalizada das necessidades de
+            cada operação.
           </p>
 
           <div className="about-points">
+            <div>
+              <CheckCircle2 size={20} />
+              Treinamentos SST
+            </div>
+
             <div>
               <CheckCircle2 size={20} />
               Prevenção de riscos
@@ -68,11 +72,6 @@ export default function About() {
             <div>
               <CheckCircle2 size={20} />
               Conformidade ocupacional
-            </div>
-
-            <div>
-              <CheckCircle2 size={20} />
-              Proteção aos colaboradores
             </div>
 
             <div>
